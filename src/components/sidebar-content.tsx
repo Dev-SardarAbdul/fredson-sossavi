@@ -35,7 +35,8 @@ const SidebarContent = ({
       hasDropdown: true,
       subRoutes: [
         { text: "Season International", route: "season" },
-        { text: "Drinkwater's, Cambridge", route: "drink" },
+        { text: "Drinkwater's Cambridge", route: "drink" },
+        { text: "Boston University", route: "boston-university" },
       ],
     },
     {

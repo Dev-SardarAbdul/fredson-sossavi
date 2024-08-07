@@ -119,7 +119,7 @@ const Calling = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col w-full"
           >
-            <Image
+            <img
               width={300}
               height={300}
               key={activeIndex}
