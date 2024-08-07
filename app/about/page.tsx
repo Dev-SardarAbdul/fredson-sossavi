@@ -24,6 +24,8 @@ const Ppage = () => {
         4. Postcards from the Edge, Group Exhibition, New York City, 2023.
       </p>
       <Image
+        placeholder="blur"
+        quality={100}
         src={aboutImg}
         className="w-full sm:w-[400px] mx-auto rounded-2xl"
         alt="About image"

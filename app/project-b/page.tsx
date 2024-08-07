@@ -20,8 +20,8 @@ const ProjectB = () => {
             className="flex flex-col w-full"
           >
             <Image
-              width={300}
-              height={300}
+              placeholder="blur"
+              quality={100}
               src={projectB}
               alt={"Al's 540 Kick"}
               className="sm:w-[600px] w-full h-[400px] 2xl:h-[600px] object-cover mx-auto rounded-2xl"

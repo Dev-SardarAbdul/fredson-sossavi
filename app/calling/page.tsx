@@ -120,6 +120,8 @@ const Calling = () => {
             className="flex flex-col w-full"
           >
             <Image
+              placeholder="blur"
+              quality={100}
               key={activeIndex}
               src={images[activeIndex].img}
               alt={images[activeIndex].text}

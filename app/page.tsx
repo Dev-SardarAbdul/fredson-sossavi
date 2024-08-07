@@ -34,6 +34,8 @@ export default function Home() {
           key={activeIndex}
         >
           <Image
+            placeholder="blur"
+            quality={100}
             src={imgs[activeIndex]}
             alt={`Home Image ${activeIndex + 1}`}
             className="md:w-[700px] w-full rounded-2xl object-cover h-[400px] md:h-[700px] mx-auto block"

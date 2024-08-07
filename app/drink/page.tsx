@@ -66,11 +66,11 @@ const Drink = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col w-full"
         >
-          <img
-            width={300}
-            height={300}
+          <Image
+            placeholder="blur"
+            quality={100}
             key={activeIndex}
-            src={images[activeIndex].img.src}
+            src={images[activeIndex].img}
             alt={"Drink Shots"}
             className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover mx-auto rounded-2xl"
           />
