@@ -21,9 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="container gap-8 mx-auto px-4 py-4">
           <Navbar />
-          <div className="flex justify-start items-start mt-8">
+          <div className="flex justify-start items-start mt-6 md:mt-12">
             <Sidebar />
-            {children}
+            <div className="w-full">{children}</div>
           </div>
         </div>
       </body>
