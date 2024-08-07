@@ -2,22 +2,22 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import img1 from "@/assets/calling/img1.jpg";
-import img2 from "@/assets/calling/img2.jpg";
-import img3 from "@/assets/calling/img3.jpg";
-import img4 from "@/assets/calling/img4.jpg";
-import img5 from "@/assets/calling/img5.jpg";
-import img6 from "@/assets/calling/img6.jpg";
-import img7 from "@/assets/calling/img7.jpg";
-import img8 from "@/assets/calling/img8.jpg";
-import img9 from "@/assets/calling/img9.jpg";
-import img10 from "@/assets/calling/img10.jpg";
-import img11 from "@/assets/calling/img11.jpg";
-import img12 from "@/assets/calling/img12.jpg";
-import img13 from "@/assets/calling/img13.jpg";
-import img14 from "@/assets/calling/img14.jpg";
-import img15 from "@/assets/calling/img15.jpg";
-import img16 from "@/assets/calling/img16.jpg";
+import img1 from "@/assets/calling/img1.webp";
+import img2 from "@/assets/calling/img2.webp";
+import img3 from "@/assets/calling/img3.webp";
+import img4 from "@/assets/calling/img4.webp";
+import img5 from "@/assets/calling/img5.webp";
+import img6 from "@/assets/calling/img6.webp";
+import img7 from "@/assets/calling/img7.webp";
+import img8 from "@/assets/calling/img8.webp";
+import img9 from "@/assets/calling/img9.webp";
+import img10 from "@/assets/calling/img10.webp";
+import img11 from "@/assets/calling/img11.webp";
+import img12 from "@/assets/calling/img12.webp";
+import img13 from "@/assets/calling/img13.webp";
+import img14 from "@/assets/calling/img14.webp";
+import img15 from "@/assets/calling/img15.webp";
+import img16 from "@/assets/calling/img16.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Calling = () => {
@@ -119,11 +119,9 @@ const Calling = () => {
             transition={{ duration: 0.5 }}
             className="flex flex-col w-full"
           >
-            <img
-              width={300}
-              height={300}
+            <Image
               key={activeIndex}
-              src={images[activeIndex].img.src}
+              src={images[activeIndex].img}
               alt={images[activeIndex].text}
               className="sm:w-[600px] w-full h-[400px] 2xl:h-[600px] object-cover mx-auto rounded-2xl"
             />

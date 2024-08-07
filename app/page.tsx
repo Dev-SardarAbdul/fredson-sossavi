@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import homeImg1 from "@/assets/home/homeImg1.jpg";
-import homeImg2 from "@/assets/home/homeImg2.jpg";
-import homeImg3 from "@/assets/home/homeImg3.jpg";
-import homeImg4 from "@/assets/home/homeImg4.jpg";
-import homeImg5 from "@/assets/home/homeImg5.jpg";
-import homeImg6 from "@/assets/home/homeImg6.jpg";
+import homeImg1 from "@/assets/home/homeImg1.webp";
+import homeImg2 from "@/assets/home/homeImg2.webp";
+import homeImg3 from "@/assets/home/homeImg3.webp";
+import homeImg4 from "@/assets/home/homeImg4.webp";
+import homeImg5 from "@/assets/home/homeImg5.webp";
+import homeImg6 from "@/assets/home/homeImg6.webp";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 

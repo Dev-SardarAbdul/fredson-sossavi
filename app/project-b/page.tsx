@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import projectB from "@/assets/projecBImg.png";
+import projectB from "@/assets/projecBImg.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 const ProjectB = () => {

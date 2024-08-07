@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import img1 from "@/assets/bu/bu1.jpg";
-import img2 from "@/assets/bu/bu2.jpg";
-import img3 from "@/assets/bu/bu3.jpg";
-import img4 from "@/assets/bu/bu4.jpg";
-import img5 from "@/assets/bu/bu5.jpg";
-import img6 from "@/assets/bu/bu6.jpg";
-import img7 from "@/assets/bu/bu7.jpg";
-import img8 from "@/assets/bu/bu8.jpg";
-import img9 from "@/assets/bu/bu9.jpg";
-import img10 from "@/assets/bu/bu10.jpg";
+import img1 from "@/assets/bu/bu1.webp";
+import img2 from "@/assets/bu/bu2.webp";
+import img3 from "@/assets/bu/bu3.webp";
+import img4 from "@/assets/bu/bu4.webp";
+import img5 from "@/assets/bu/bu5.webp";
+import img6 from "@/assets/bu/bu6.webp";
+import img7 from "@/assets/bu/bu7.webp";
+import img8 from "@/assets/bu/bu8.webp";
+import img9 from "@/assets/bu/bu9.webp";
+import img10 from "@/assets/bu/bu10.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Drink = () => {

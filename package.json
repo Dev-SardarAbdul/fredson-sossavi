@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "process-media": "mediamagic"
   },
   "dependencies": {
     "framer-motion": "^11.3.23",
+    "mediamagic": "^1.0.3",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",

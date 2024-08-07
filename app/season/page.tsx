@@ -2,15 +2,15 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import img1 from "@/assets/season/season1.jpg";
-import img2 from "@/assets/season/season2.jpg";
-import img3 from "@/assets/season/season3.jpg";
-import img4 from "@/assets/season/season4.jpg";
-import img5 from "@/assets/season/season5.jpg";
-import img6 from "@/assets/season/season6.jpg";
-import img7 from "@/assets/season/season7.jpg";
-import img8 from "@/assets/season/season8.jpg";
-import img9 from "@/assets/season/season9.jpg";
+import img1 from "@/assets/season/season1.webp";
+import img2 from "@/assets/season/season2.webp";
+import img3 from "@/assets/season/season3.webp";
+import img4 from "@/assets/season/season4.webp";
+import img5 from "@/assets/season/season5.webp";
+import img6 from "@/assets/season/season6.webp";
+import img7 from "@/assets/season/season7.webp";
+import img8 from "@/assets/season/season8.webp";
+import img9 from "@/assets/season/season9.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Season = () => {

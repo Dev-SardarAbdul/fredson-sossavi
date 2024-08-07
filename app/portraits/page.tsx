@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import img1 from "@/assets/portraits/portrait1.jpg";
-import img2 from "@/assets/portraits/portrait2.jpg";
-import img3 from "@/assets/portraits/portrait3.jpg";
-import img4 from "@/assets/portraits/portrait4.jpg";
-import img5 from "@/assets/portraits/portrait5.jpg";
-import img6 from "@/assets/portraits/portrait6.jpg";
+import img1 from "@/assets/portraits/portrait1.webp";
+import img2 from "@/assets/portraits/portrait2.webp";
+import img3 from "@/assets/portraits/portrait3.webp";
+import img4 from "@/assets/portraits/portrait4.webp";
+import img5 from "@/assets/portraits/portrait5.webp";
+import img6 from "@/assets/portraits/portrait6.webp";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Portraits = () => {

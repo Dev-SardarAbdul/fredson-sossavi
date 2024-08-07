@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "@/assets/aboutImg.jpg";
+import aboutImg from "@/assets/aboutImg.webp";
 import Image from "next/image";
 
 const Ppage = () => {
