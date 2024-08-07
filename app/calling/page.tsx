@@ -142,7 +142,7 @@ const Calling = () => {
           </h4>
           <p className="text-center text-sm mt-2">2020 - Present</p>
 
-          <p className="mt-8 w-3/4 mx-auto">
+          <p className="mt-8 w-full md:w-3/4 mx-auto">
             In the Summer of 1983, literary magazine and publisher, Granta,
             defined a new literary movement in its 8th issue,
             <span className="italic"> Granta 8: Dirty Realism</span>. The 1983
