@@ -27,7 +27,7 @@ const Ppage = () => {
         placeholder="blur"
         quality={100}
         src={aboutImg}
-        className="w-full sm:w-[400px] mx-auto rounded-2xl"
+        className="w-full sm:w-[400px] mx-auto"
         alt="About image"
       />
     </div>

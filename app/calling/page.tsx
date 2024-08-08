@@ -125,7 +125,7 @@ const Calling = () => {
               key={activeIndex}
               src={images[activeIndex].img}
               alt={images[activeIndex].text}
-              className="sm:w-[600px] w-full h-[400px] 2xl:h-[600px] object-cover mx-auto rounded-2xl"
+              className="sm:w-[600px] w-full h-[400px] 2xl:h-[600px] object-cover mx-auto"
             />
             <p className="font-normal mt-2 text-base text-center">
               {activeIndex + 1} / {images.length}

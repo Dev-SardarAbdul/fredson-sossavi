@@ -57,7 +57,7 @@ const Portraits = () => {
             key={activeIndex}
             src={images[activeIndex].img}
             alt={"Portrait Shots"}
-            className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover mx-auto rounded-2xl"
+            className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover mx-auto"
           />
           <p className="font-normal mt-2 text-base text-center">
             {activeIndex + 1} / {images.length}

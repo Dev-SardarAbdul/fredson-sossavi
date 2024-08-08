@@ -13,7 +13,7 @@ const SidebarContent = ({
 
   const navClass = "font-medium text-xl cursor-pointer w-fit text-black";
   const subNavClass =
-    "text-base flex justify-start items-center gap-1 cursor-pointer w-fit text-black";
+    "text-base flex justify-start pl-2 items-center gap-1 cursor-pointer w-fit text-black";
 
   const navLinks = [
     { id: 1, text: "About", route: "about", hasDropdown: false },
@@ -30,8 +30,8 @@ const SidebarContent = ({
     },
     {
       id: 3,
-      text: "Commercial",
-      route: "commercial",
+      text: "Commission",
+      route: "",
       hasDropdown: true,
       subRoutes: [
         { text: "Season International", route: "season" },
@@ -43,7 +43,7 @@ const SidebarContent = ({
       id: 4,
       text: "Instagram",
       route: "",
-      insta: "https://www.instagram.com/freddybluray/",
+      insta: "https://www.instagram.com/freddzy",
       hasDropdown: false,
     },
     {
@@ -97,10 +97,7 @@ const SidebarContent = ({
                           key={item.route}
                           href={item?.route}
                         >
-                          <p className={subNavClass}>
-                            <GoDotFill className="text-black" />
-                            {item.text}
-                          </p>
+                          <p className={subNavClass}>{item.text}</p>
                         </Link>
                       ))}
                     </div>
