@@ -12,6 +12,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
+import { Pagination } from "swiper/modules";
+
 const Portraits = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -57,7 +59,14 @@ const Portraits = () => {
   return (
     <div>
       <div className="sm:hidden block">
-        <Swiper loop={true} className="min-w-0">
+        <Swiper
+          pagination={{
+            type: "fraction",
+          }}
+          modules={[Pagination]}
+          loop={true}
+          className="min-w-0"
+        >
           {images?.map((img) => (
             <SwiperSlide>
               <Image
