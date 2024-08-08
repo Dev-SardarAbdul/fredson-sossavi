@@ -12,6 +12,8 @@ import img7 from "@/assets/drink/drink7.webp";
 import img8 from "@/assets/drink/drink8.webp";
 import img9 from "@/assets/drink/drink9.webp";
 import { AnimatePresence, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Drink = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -69,42 +71,61 @@ const Drink = () => {
 
   return (
     <div>
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          exit={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          key={activeIndex}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col w-full"
-        >
-          <Image
-            placeholder="blur"
-            quality={100}
-            key={activeIndex}
-            src={images[activeIndex].img}
-            alt={"Drink Shots"}
-            className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover mx-auto"
-          />
-          <p className="font-normal mt-2 text-base text-center">
-            {activeIndex + 1} / {images.length}
-          </p>
-        </motion.div>
-      </AnimatePresence>
+      <div className="sm:hidden block">
+        <Swiper loop={true} className="min-w-0">
+          {images?.map((img) => (
+            <SwiperSlide>
+              <Image
+                placeholder="blur"
+                quality={100}
+                key={activeIndex}
+                src={img.img}
+                alt={"Boston University Shots"}
+                className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-      <div className="mt-8 flex justify-center items-center gap-4">
-        <button
-          onClick={handlePrevious}
-          className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
-        >
-          Previous
-        </button>
-        <button
-          onClick={handleNext}
-          className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
-        >
-          Next
-        </button>
+      <div className="max-sm:hidden">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            key={activeIndex}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col w-full"
+          >
+            <Image
+              placeholder="blur"
+              quality={100}
+              key={activeIndex}
+              src={images[activeIndex].img}
+              alt={"Drink Shots"}
+              className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover mx-auto"
+            />
+            <p className="font-normal mt-2 text-base text-center">
+              {activeIndex + 1} / {images.length}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="mt-8 flex justify-center items-center gap-4">
+          <button
+            onClick={handlePrevious}
+            className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
+          >
+            Previous
+          </button>
+          <button
+            onClick={handleNext}
+            className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

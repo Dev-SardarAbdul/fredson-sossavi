@@ -20,7 +20,7 @@ export default function RootLayout({
           <Navbar />
           <div className="flex justify-start items-start mt-6 md:mt-12">
             <Sidebar />
-            <div className="w-full">{children}</div>
+            <div className="w-full min-w-0">{children}</div>
           </div>
         </div>
       </body>

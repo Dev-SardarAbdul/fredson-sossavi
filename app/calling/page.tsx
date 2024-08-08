@@ -19,6 +19,8 @@ import img14 from "@/assets/calling/img14.webp";
 import img15 from "@/assets/calling/img15.webp";
 import img16 from "@/assets/calling/img16.webp";
 import { AnimatePresence, motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Calling = () => {
   const [showImages, setShowImages] = useState(false);
@@ -122,31 +124,52 @@ const Calling = () => {
   return (
     <div>
       {showImages ? (
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            exit={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            key={activeIndex}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col w-full"
-          >
-            <Image
-              placeholder="blur"
-              quality={100}
-              key={activeIndex}
-              src={images[activeIndex].img}
-              alt={images[activeIndex].text}
-              className="sm:w-[600px] w-full h-[400px] 2xl:h-[600px] object-cover mx-auto"
-            />
-            <p className="font-normal mt-2 text-base text-center">
-              {activeIndex + 1} / {images.length}
-            </p>
-            <p className="font-normal text-base text-center">
-              {images[activeIndex].text}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+        <>
+          <div className="sm:hidden block">
+            <Swiper loop={true} className="min-w-0">
+              {images?.map((img) => (
+                <SwiperSlide>
+                  <Image
+                    placeholder="blur"
+                    quality={100}
+                    key={activeIndex}
+                    src={img.img}
+                    alt={"Boston University Shots"}
+                    className="sm:w-[600px] w-full h-[400px] sm:h-[600px] object-cover"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          <div className="max-sm:hidden">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                exit={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                key={activeIndex}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col w-full"
+              >
+                <Image
+                  placeholder="blur"
+                  quality={100}
+                  key={activeIndex}
+                  src={images[activeIndex].img}
+                  alt={images[activeIndex].text}
+                  className="sm:w-[600px] w-full h-[400px] 2xl:h-[600px] object-cover mx-auto"
+                />
+                <p className="font-normal mt-2 text-base text-center">
+                  {activeIndex + 1} / {images.length}
+                </p>
+                <p className="font-normal text-base text-center">
+                  {images[activeIndex].text}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </>
       ) : (
         <React.Fragment>
           <h4 className="text-2xl font-semibold text-center">
@@ -194,7 +217,7 @@ const Calling = () => {
       )}
 
       {showImages && (
-        <div className="mt-8 flex justify-center items-center gap-4">
+        <div className="mt-8 flex max-sm:hidden justify-center items-center gap-4">
           <button
             onClick={handlePrevious}
             className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
