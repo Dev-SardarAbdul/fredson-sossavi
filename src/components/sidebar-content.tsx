@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { GoDotFill } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,7 +10,7 @@ const SidebarContent = ({
 }) => {
   const [dropdownValue, setDropdownValue] = useState("");
 
-  const navClass = "font-medium text-xl cursor-pointer w-fit text-black";
+  const navClass = "font-medium text-lg cursor-pointer w-fit text-black";
   const subNavClass =
     "text-base flex justify-start pl-2 items-center gap-1 cursor-pointer w-fit text-black";
 
@@ -69,7 +68,8 @@ const SidebarContent = ({
         <div key={link.id}>
           {link.hasDropdown ? (
             <div>
-              <div
+              <motion.div
+                whileHover={{ scale: 1.1 }}
                 onClick={() => handleDropdownClick(link.text)}
                 className="w-fit cursor-pointer flex justify-start items-center gap-4"
               >
@@ -79,7 +79,7 @@ const SidebarContent = ({
                     dropdownValue === link.text ? "rotate-180" : "rotate-0"
                   }`}
                 />
-              </div>
+              </motion.div>
               <AnimatePresence initial={false}>
                 {dropdownValue === link.text && (
                   <motion.div
@@ -97,7 +97,12 @@ const SidebarContent = ({
                           key={item.route}
                           href={item?.route}
                         >
-                          <p className={subNavClass}>{item.text}</p>
+                          <motion.p
+                            whileHover={{ scale: 1.1 }}
+                            className={subNavClass}
+                          >
+                            {item.text}
+                          </motion.p>
                         </Link>
                       ))}
                     </div>
@@ -118,7 +123,9 @@ const SidebarContent = ({
               }}
               href={link.route}
             >
-              <p className={navClass}>{link.text}</p>
+              <motion.p whileHover={{ scale: 1.1 }} className={navClass}>
+                {link.text}
+              </motion.p>
             </Link>
           )}
         </div>

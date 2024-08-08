@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --frank-gothic: "frank-gothic";
+  --cresta-regular: "cresta-regular";
+}
+
+@font-face {
+  font-family: "frank-gothic";
+  src: url("../public/fonts/franklin-gothic.ttf");
+}
+
+@font-face {
+  font-family: "cresta-regular";
+  src: url("../public/fonts/cresta-regular.otf");
+}
+
+body {
+  font-family: var(--cresta-regular) !important;
+}

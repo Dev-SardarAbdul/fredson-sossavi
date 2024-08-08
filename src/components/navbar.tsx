@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center gap-4">
       <Link href={"/"}>
-        <h4 className="text-black font-extrabold text-2xl sm:text-3xl lg:text-5xl cursor-pointer">
+        <h4 className="text-black font-frankGothic text-2xl sm:text-3xl lg:text-5xl cursor-pointer">
           FREDSON SOSSAVI
         </h4>
       </Link>
