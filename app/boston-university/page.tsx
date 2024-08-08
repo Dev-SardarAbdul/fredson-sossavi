@@ -60,6 +60,18 @@ const Drink = () => {
     },
   ];
 
+  const handleNext = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div>
       <AnimatePresence mode="wait" initial={false}>
@@ -87,19 +99,14 @@ const Drink = () => {
 
       <div className="mt-8 flex justify-center items-center gap-4">
         <button
-          disabled={activeIndex === 0}
-          onClick={() => activeIndex > 0 && setActiveIndex((prev) => prev - 1)}
-          className="bg-gray-200 px-8 py-1.5 rounded-md disabled:opacity-50 text-base font-semibold"
+          onClick={handlePrevious}
+          className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
         >
           Previous
         </button>
         <button
-          disabled={activeIndex === 9}
-          onClick={() =>
-            activeIndex < images.length - 1 &&
-            setActiveIndex((prev) => prev + 1)
-          }
-          className="bg-gray-200 px-8 py-1.5 disabled:opacity-50 rounded-md text-base font-semibold"
+          onClick={handleNext}
+          className="bg-gray-200 px-8 py-1.5 rounded-md text-base font-semibold"
         >
           Next
         </button>
